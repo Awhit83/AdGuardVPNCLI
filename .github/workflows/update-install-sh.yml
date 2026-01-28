@@ -12,8 +12,8 @@ jobs:
       - name: Run script
         run: |
           set -e -x
-          git fetch origin master --tags
-          git checkout -B master origin/master
+          git fetch origin efficient-master --tags
+          git checkout -B efficient-master origin/efficient-master
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com>"
           git config user.name "github-actions[bot]"
           for channel in nightly beta release; do
