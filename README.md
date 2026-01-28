@@ -72,16 +72,16 @@ gpg --keyserver 'keys.openpgp.org' --recv-key '28645AC9776EC4C00BCE2AFC0FE641E72
 Then, verify the signature:
     
 ```shell
-gpg --verify /opt/adguardvpn_cli/adguardvpn-cli.sig 
+gpg --verify /opt/adguardvpn_cli/advpn-c.sig 
 ```  
 
-If you use custom installation path, replace `/opt/adguardvpn_cli/adguardvpn-cli.sig` with the path to the signature
+If you use custom installation path, replace `/opt/adguardvpn_cli/advpn-c.sig` with the path to the signature
 file. It should be in the same directory as the binary file.
 
 You'll see something like this:
 
 ```
-gpg: assuming signed data in 'adguardvpn-cli'
+gpg: assuming signed data in 'advpn-c'
 gpg: Signature made Wed Feb 28 19:24:43 2024 +08
 gpg:                using RSA key 28645AC9776EC4C00BCE2AFC0FE641E7235E2EC6
 gpg:                issuer "devteam@adguard.com"
@@ -103,7 +103,7 @@ Primary key fingerprint: 2864 5AC9 776E C4C0 0BCE  2AFC 0FE6 41E7 235E 2EC6
 
 ## Usage
 
-Run `adguardvpn-cli [command]` to use the VPN service. Below are the available commands and their options:
+Run `advpn-c [command]` to use the VPN service. Below are the available commands and their options:
 
 ### General Options
 
@@ -113,13 +113,13 @@ Run `adguardvpn-cli [command]` to use the VPN service. Below are the available c
 
 ### Subcommands
 
-Each subcommand has its own set of options. Run `adguardvpn-cli [command] --help` to see the list of available options.
+Each subcommand has its own set of options. Run `advpn-c [command] --help` to see the list of available options.
 
 ## Log in and log out
 
 To log in or create an account, type:
 
-    adguardvpn-cli login
+    advpn-c login
 
 When prompted with the menu:
 
@@ -137,7 +137,7 @@ You can also create an AdGuard account on our [website](https://auth.adguardacco
 
 To log out of AdGuard VPN, type:
 
-    adguardvpn-cli logout
+    advpn-c logout
 
 #### list-locations
 
