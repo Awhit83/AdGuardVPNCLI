@@ -1,0 +1,15 @@
+[project]
+name = "AdGuard VPN CLI"
+executable_name = "advpn-c"
+uprstream_repo = "AdguardTeam/AdGuardVPNCLI"
+uprstream_branch = "master"
+
+[fork]
+own = "Awhit83"
+default_branch = "efficient-master"
+
+[naming]
+# Use advpn-c for this fork instead of adguardvpn-cli
+use_short_name = true
+short_name = "advpn-c"
+full_name = "adguardvpn-cli"
