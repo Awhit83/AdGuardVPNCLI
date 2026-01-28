@@ -219,3 +219,76 @@ Control site exclusions with the following subcommands:
 - `show`: Show all exclusions.
 - `clear`: Clear all exclusions.
 - `mode`: Set VPN exclusion mode (general/selective) or show the current mode if no options are passed.
+
+## Development
+
+### Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+
+### Repository Structure
+
+```
+.
+├── .github/              # GitHub configuration
+│   ├── ISSUE_TEMPLATE/   # Issue templates
+│   └── workflows/        # GitHub Actions workflows
+├── scripts/              # Installation scripts
+│   ├── beta/            # Beta channel installer
+│   ├── nightly/         # Nightly channel installer
+│   └── release/         # Release channel installer
+├── CONTRIBUTING.md       # Contribution guidelines
+├── LICENSE              # License information
+├── README.md            # This file
+└── SECURITY.md          # Security policy
+```
+
+### Testing Installation Scripts
+
+To test installation scripts locally:
+
+1. Review the script before running:
+   ```bash
+   less scripts/release/install.sh
+   ```
+
+2. Test in a safe environment (VM or container recommended):
+   ```bash
+   sh scripts/release/install.sh -v -o /tmp/test-install
+   ```
+
+3. Test different scenarios:
+   - Fresh installation: `sh scripts/release/install.sh -v`
+   - Custom path: `sh scripts/release/install.sh -v -o /custom/path`
+   - Uninstall: `sh scripts/release/install.sh -u`
+
+### Keeping Your Fork Updated
+
+To keep your fork in sync with upstream:
+
+```bash
+# Add upstream remote (first time only)
+git remote add upstream https://github.com/Awhit83/AdGuardVPNCLI.git
+
+# Fetch and merge updates
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push origin master
+```
+
+## License
+
+This fork's scripts and documentation are licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Note:** AdGuard VPN CLI itself is proprietary software. This repository only contains installation scripts and documentation. See AdGuard's [privacy policy](https://adguard-vpn.com/privacy.html) for more information.
+
+## Security
+
+For security concerns, please see our [Security Policy](SECURITY.md).
+
+## Support
+
+- **Issues**: [GitHub Issues](https://github.com/Awhit83/AdGuardVPNCLI/issues)
+- **Discussions**: Use GitHub Discussions for questions and community support
+- **Official AdGuard Support**: For issues with AdGuard VPN CLI itself, contact [AdGuard Support](https://adguard-vpn.com/)
