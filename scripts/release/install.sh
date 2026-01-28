@@ -758,7 +758,7 @@ post_install() {
 
 # Entrypoint
 
-exe_name='adguardvpn-cli'
+exe_name='advpn-c'
 output_dir=''
 channel='release'
 verbose='1'
